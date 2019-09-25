@@ -1,0 +1,7 @@
+{
+  "name": "multiple-version-example",
+  "dependencies": {
+    "elix": "github:elix/elix#master",
+    "elix2": "github:elix/elix#define"
+  }
+}

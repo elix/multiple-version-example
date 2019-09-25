@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Multiple versions of the same Elix component on a single page</title>
+
+  <!-- Elix 7.0 component, which auto-registered all components with "elix-" prefix. -->
+  <script type="module" src="node_modules/elix/src/DateComboBox.js"></script>
+
+  <!-- Elix 8.0 component that does not auto-register itself. -->
+  <script type="module">
+    import { default as DateComboBox2 } from './node_modules/elix2/src/DateComboBox.js';
+    customElements.define('date-combo-box-2', DateComboBox2);
+  </script>
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      margin: 0;
+      padding: 25px;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <p>
+    This page uses Elix 7.0 and Elix 8.0 components side-by-side.
+  </p>
+  <p>
+    Elix 7.0 DateComboBox:
+    <elix-date-combo-box></elix-date-combo-box>
+  </p>
+  <p>
+    Elix 8.0 DateComboBox:
+    <date-combo-box-2></date-combo-box-2>
+  </p>
+</body>
+
+</html>
