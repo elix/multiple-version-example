@@ -1,7 +1,7 @@
 {
   "name": "multiple-version-example",
   "dependencies": {
-    "elix": "github:elix/elix#master",
-    "elix2": "github:elix/elix#define"
+    "elix-7": "npm:elix@7.0.0",
+    "elix-8": "npm:elix@8.0.0"
   }
 }

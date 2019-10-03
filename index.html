@@ -7,12 +7,12 @@
   <title>Multiple versions of the same Elix component on a single page</title>
 
   <!-- Elix 7.0 component, which auto-registered all components with "elix-" prefix. -->
-  <script type="module" src="node_modules/elix/src/DateComboBox.js"></script>
+  <script type="module" src="node_modules/elix-7/src/DateComboBox.js"></script>
 
   <!-- Elix 8.0 component that does not auto-register itself. -->
   <script type="module">
     // Import the component we want.
-    import DateComboBox from './node_modules/elix2/src/DateComboBox.js';
+    import DateComboBox from './node_modules/elix-8/src/DateComboBox.js';
 
     // Create a subclass just in case someone else is using the same version.
     class DateComboBox2 extends DateComboBox {}
